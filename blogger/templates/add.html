@@ -1,0 +1,14 @@
+{% extends 'theme.html' %}
+{% load crispy_forms_tags %}
+{% load static %}
+{% block content %}
+    <div class="container-fluid">
+        <main class="tm-main">
+            <form action="" method="POST" enctype="multipart/form-data">
+                {% csrf_token %}
+                {{add|crispy}}
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </main>  
+    </div>  
+{% endblock %}
